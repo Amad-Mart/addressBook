@@ -13,6 +13,10 @@ body, .jumbotron, footer {
 nav {
     background-color: darkblue;
 }
+hr {
+    border: 3px solid red;
+    border-radius: 2px;
+}
 
 .boldBuzz {
     font-weight: bolder;
