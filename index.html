@@ -73,7 +73,7 @@
         </div>
     </div>
     <main role="main" class="container">
-        <button type="button" class="btn btn-secondary" data-toggle="#myModal">
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#addAddress">
             Add Address
         </button>
         <hr>
@@ -92,8 +92,9 @@
 
             </tbody>
         </table>
-        <div class="modal" id="addAddress">
+        <div class="modal fade" id="addAddress">
             <div class="modal-dialog">
+                <div class="modal-content"></div>
                 <div class="modal-header">
                     <h4 class="modal-title"> Add a new address</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -104,36 +105,32 @@
                             <label for="newName">Full Name</label>
                             <input type="text" class="form-control" id="newName" placeholder="Full Name">
                         </div>
-                    </form>
-                    <form id="newAddressForm">
                         <div class="form-group">
                             <label for="newCity">City</label>
                             <input type="text" class="form-control" id="newCity" placeholder="City">
                         </div>
-                    </form>
-                    <form id="newAddressForm">
                         <div class="form-group">
                             <label for="newState">State</label>
                             <input type="text" class="form-control" id="newState" placeholder="State">
                         </div>
-                    </form>
-                    <form id="newAddressForm">
                         <div class="form-group">
                             <label for="newEmail">Email</label>
                             <input type="email" class="form-control" id="newEmail" placeholder="Email">
                         </div>
-                    </form>
-                    <form id="newAddressForm">
                         <div class="form-group">
                             <label for="newPhone">Phone</label>
-                            <input type="tel" class="form-control" id="newPhone" placeholder="Phone Number">
+                            <!-- pattern tells html how to display info... i think? -->
+                            <input type="tel" class="form-control" id="newPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                placeholder="Phone Number">
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger" onclick="saveAddress()" style="background-color: coral;" data-dismiss="modal">Save</button>
                 </div>
             </div>
+        </div>
 
         </div>
     </main>
