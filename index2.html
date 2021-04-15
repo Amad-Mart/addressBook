@@ -1,0 +1,142 @@
+<!-- good blog idea -->
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>JS Basics - Loops and Templates</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!--Custom CSS-->
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+
+<body>
+  <header>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container">
+        <!--                                        TODO: update -->
+        <a class="navbar-brand" href="index.html">FizzBuzz</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="index2.html">Test it!</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="code.html">The Code</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://amadeusportfolio.netlify.app" target="_blank">The
+                Developer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div>
+    <div class="container hero">
+      <div>
+        <h1>JS arrays, loops, Templates</h1>
+        <h4>templating examples 2</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Begin page content -->
+  <main role="main" class="flex-shrink-0">
+    <div class="container-fluid">
+      <h1 class="pb-5 text-lg-center">Enter in Two Numbers and Print Range</h1>
+      <form>
+        <div class="form-row">
+          <div class="col-lg-6 col-md-6">
+            <label class="inputText2">Enter a number which <span class="boldFizz">Fizz</span> will appear:</label>
+            <input type="number" id="multFizz" value=4>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <label class="inputText">Enter A Start Number:</label>
+            <input type="number" id="numOne" value=1>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <label class="inputText">Enter a number which <span class="boldBuzz">Buzz</span> will appear:</label>
+            <input type="number" id="multBuzz" value=7>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <label class="inputText">Enter A Second Number:</label>
+            <input type="number" id="numTwo" value=100>
+          </div>
+          <div class="col text-lg-center">
+            <button id="submitBtn" type="button" class="btn btn-danger ">Submit</button>
+          </div>
+        </div>
+      </form>
+      <hr>
+      <table class="table table-striped" id="resultTable">
+        <thead class="thead-dark">
+          <tr>
+            <!-- colspan does: -->
+            <th colspan="5">Result</th>
+          </tr>
+        </thead>
+        <tbody id="resultsBody">
+          <!-- Data goes here -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span class="text-muted">Place sticky footer content here.</span>
+    </div>
+  </footer>
+  <!-- wont render to page, its like a template -->
+  <template id="Data-Template">
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+
+  </template>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+  </div>
+  <script src="js/ex2.js"></script>
+
+  <!-- Button events here -->
+  <script>
+    document.getElementById("submitBtn").addEventListener("click", fizzBuzz);
+  </script>
+</body>
+
+</html>
